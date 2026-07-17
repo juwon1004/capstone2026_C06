@@ -7,7 +7,7 @@ race_stack 전체를 이식하지 않고, **인터페이스 계약(토픽 이름
 
 ## 패키지 구성 (race_stack 대응)
 
-| 이 워크스페이스 | race_stack 대응 모듈 | 담당 |
+| 이 워크스페이스 | race_stack 대응 모듈 | 
 |---|---|---|
 | `f1tenth_maps` | (map 파일 자체, base_system 일부) |  |
 | `f1tenth_waypoints` | `planner` | 
