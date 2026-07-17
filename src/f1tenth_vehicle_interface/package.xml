@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>f1tenth_vehicle_interface</name>
+  <version>0.0.1</version>
+  <description>
+    /drive(AckermannDriveStamped)를 받아 실제로 시뮬레이터 혹은 실차(VESC/조향 서보)로
+    전달하는 유일한 스왑 지점. 이 패키지만 sim/real이 다르고 나머지는 전부 공통.
+    (race_stack의 base_system/sensors 대응, f1tenth_system 참고)
+  </description>
+  <maintainer email="wxxn1004@gmail.com">team</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>ackermann_msgs</depend>
+  <depend>nav_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

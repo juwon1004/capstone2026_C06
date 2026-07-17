@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>f1tenth_controller_interface</name>
+  <version>0.0.1</version>
+  <description>
+    MPPI 컨트롤러 조원을 위한 골격 패키지. /scan, /odom, /global_path를 구독하고
+    /drive(AckermannDriveStamped)를 발행하는 인터페이스만 고정되어 있고,
+    내부 MPPI 로직은 자유롭게 구현하면 된다. (race_stack의 controller 모듈 대응)
+  </description>
+  <maintainer email="wxxn1004@gmail.com">team</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>ackermann_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

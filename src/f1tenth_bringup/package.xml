@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>f1tenth_bringup</name>
+  <version>0.0.1</version>
+  <description>
+    F1TENTH 캡스톤 통합 launch 패키지. sim:=true/false 인자 하나로
+    map -> localization -> waypoints -> controller -> vehicle_interface
+    전체 파이프라인을 동일 구조로 실행한다. (race_stack의 stack_master 대응)
+  </description>
+  <maintainer email="wxxn1004@gmail.com">team</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>f1tenth_waypoints</exec_depend>
+  <exec_depend>f1tenth_controller_interface</exec_depend>
+  <exec_depend>f1tenth_vehicle_interface</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

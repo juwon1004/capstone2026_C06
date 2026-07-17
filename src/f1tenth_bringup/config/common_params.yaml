@@ -1,0 +1,15 @@
+# 시뮬/실차 공통 파라미터. 여기 값은 두 환경에서 동일하게 유지되어야 재현성이 생김.
+mppi_controller:
+  ros__parameters:
+    control_rate_hz: 50.0
+    max_speed: 4.0          # m/s, 초기엔 낮게 시작해서 점진적으로 올릴 것
+    max_steering_angle: 0.4189   # rad (~24deg, F1TENTH 표준)
+    wheelbase: 0.3302        # m, 차량 실측값으로 교체
+    num_samples: 1024
+    horizon_steps: 30
+    dt: 0.05
+
+waypoints:
+  ros__parameters:
+    csv_path: "config/centerline.csv"
+    loop: true   # 트랙이 폐루프면 true
