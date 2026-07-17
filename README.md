@@ -9,10 +9,10 @@ race_stack 전체를 이식하지 않고, **인터페이스 계약(토픽 이름
 
 | 이 워크스페이스 | race_stack 대응 모듈 | 담당 |
 |---|---|---|
-| `f1tenth_maps` | (map 파일 자체, base_system 일부) | 한상아 |
-| `f1tenth_waypoints` | `planner` | 박성현 / 한상아 |
-| `f1tenth_controller_interface` | `controller` (MPPI) | 백종민 / 박성현 |
-| `f1tenth_vehicle_interface` | `base_system`, `sensors` | 백종민 |
+| `f1tenth_maps` | (map 파일 자체, base_system 일부) |  |
+| `f1tenth_waypoints` | `planner` | 
+| `f1tenth_controller_interface` | `controller` (MPPI) | 
+| `f1tenth_vehicle_interface` | `base_system`, `sensors` | 
 | `f1tenth_bringup` | `stack_master` | 전체 통합용 launch |
 
 ## 핵심 아이디어: 시뮬/실차는 "입출력단"만 다르다
@@ -31,7 +31,7 @@ race_stack 전체를 이식하지 않고, **인터페이스 계약(토픽 이름
 map → localization → waypoints → controller 는 100% 동일한 노드가 재사용되고,
 맨 끝의 vehicle_interface만 스왑됩니다. 이게 "매핑 따로 시뮬 따로"를 없애는 핵심입니다.
 
-## 토픽/메시지 계약 (조원과 반드시 합의할 것)
+## 토픽/메시지 계약 (합의할 것)
 
 | 토픽 | 타입 | 발행 | 구독 |
 |---|---|---|---|
